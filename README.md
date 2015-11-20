@@ -1,8 +1,8 @@
 Configuration
 =============
 
-1. Change the server.document-root in config.conf to whatever directory your .mov is in.
-2. Change line 2 in fuzz.sh to the name of your .mov file without the extension.
+1. Change the server.document-root in config.conf to whatever directory your .pdf is in.
+2. Change line 2 in fuzz.sh to the name of your .pdf file without the extension.
 
 Usage
 ======
