@@ -1,13 +1,7 @@
 #!/bin/bash
-file="Demo"
+file="integral"
 seed=$RANDOM
-zzuf -s $seed -r 0.0001:0.001 < $file.mov > fuzzed.mov
-date +"%T Fuzzed $file.mov with seed $seed" >> log.txt
-echo "Content-Type: text/html
-
-<html>
-<head>
-</head>
-<body>
-<video src = "fuzzed.mov" controls autoplay> </video>
-</body>"
+zzuf -s $seed -r 0.00001:0.0001 < $file.pdf > fuzzed.pdf
+date +"%T Fuzzed $file.pdf with seed $seed" | tee -a log.txt >&2
+printf 'Content-Type: application/pdf\r\n\r\n'
+cat fuzzed.pdf
